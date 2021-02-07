@@ -3,6 +3,9 @@ name = "hexlet-code"
 version = "0.1.0"
 description = ""
 authors = ["Dobro <matematikaigor@gmail.com>"]
+packages = [
+  { include = "gendiff" },
+]
 
 [tool.poetry.dependencies]
 python = "^3.8"
@@ -17,6 +20,3 @@ build-backend = "poetry.core.masonry.api"
 [tool.poetry.scripts]
 gendiff = "gendiff.scripts.gendiff:main"
 
-packages = [
-  { include = "gendiff" },
-]
