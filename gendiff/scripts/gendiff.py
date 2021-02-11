@@ -2,12 +2,13 @@
 
 """Test."""
 
-from gendiff import gendiff_cli
+from gendiff.gendiff import generate_diff
 
 
 def main():
     """CLI command."""
-    gendiff_cli.gendiff()
+    diff = generate_diff()
+    print(diff)
 
 
 if __name__ == '__main__':
