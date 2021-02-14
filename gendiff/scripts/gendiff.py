@@ -2,13 +2,15 @@
 
 """Test."""
 
+import sys
+
 from gendiff.gendiff import generate_diff
 
 
 def main():
     """CLI command."""
     diff = generate_diff()
-    print(diff)
+    sys.stdout.write(diff)
 
 
 if __name__ == '__main__':
