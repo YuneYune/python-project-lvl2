@@ -32,4 +32,6 @@ jobs:
 
       # Runs Linter action
       - name: Run Pytest
-        run: pytest
+        run: |
+          pwd
+          pytest

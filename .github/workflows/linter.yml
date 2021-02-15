@@ -33,7 +33,3 @@ jobs:
       # Runs Linter action
       - name: Run Linter
         run: make lint
-
-      # Runs Linter action
-      - name: Run Pytest
-        run: pytest
