@@ -9,9 +9,11 @@ packages = [
 
 [tool.poetry.dependencies]
 python = "^3.8"
+pytest = "^6.2.2"
 
 [tool.poetry.dev-dependencies]
 wemake-python-styleguide = "^0.15.1"
+pytest = "^6.2.2"
 
 
 [build-system]
