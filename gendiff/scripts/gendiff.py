@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-"""Test."""
+"""Generate diff."""
 
 import sys
 
