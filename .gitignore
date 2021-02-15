@@ -8,4 +8,4 @@ gendiff/__pycache__/
 gendiff/scripts/__pycache__/
 gendiff/file*
 gendiff/test*
-.pytest_cache1
+.pytest_cache
