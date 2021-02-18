@@ -28,11 +28,10 @@ jobs:
           pip install poetry
           python -m pip install --upgrade pip
           pip install flake8 pytest
-          pip install pytest-html
           make install
           poetry update
 
       # Runs Pytest action
       - name: Test with pytest
         run: |
-          poetry run pytest --html=report.html
+          poetry run pytest
