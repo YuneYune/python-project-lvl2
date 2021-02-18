@@ -26,12 +26,13 @@ jobs:
       - name: Install dependencies
         run: |
           pip install poetry
+          python -m pip install --upgrade pip
+          pip install flake8 pytest
           make install
-          pip install -U pytest
           poetry update
 
-      # Runs Linter action
-      - name: Run Pytest
+      # Runs Pytest action
+      - name: Test with pytest
         run: |
           pwd
           ls
