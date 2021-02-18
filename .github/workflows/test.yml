@@ -34,4 +34,4 @@ jobs:
       # Runs Pytest action
       - name: Test with pytest
         run: |
-          poetry run pytest python-project-lvl2 tests
+          poetry run pytest
