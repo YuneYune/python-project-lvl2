@@ -9,3 +9,4 @@ gendiff/scripts/__pycache__/
 gendiff/file*
 gendiff/test*
 .pytest_cache
+tests/__pycache__/
