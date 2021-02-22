@@ -5,6 +5,8 @@
 import argparse
 import json
 
+import yaml
+
 
 def generate_diff(first_file=None, second_file=None):
     """CLI command.
@@ -44,9 +46,14 @@ def open_dicts(first_path, second_path):
     """
     with open(first_path) as first_dict:
         with open(second_path) as second_dict:
-            first_dict = json.load(first_dict)
-            second_dict = json.load(second_dict)
-            return first_dict, second_dict
+            if first_path.endswith('json') and second_path.endswith('json'):
+                first_dict = json.load(first_dict)
+                second_dict = json.load(second_dict)
+                return first_dict, second_dict
+            elif first_path.endswith('yml') and second_path.endswith('yml'):
+                first_dict = yaml.safe_load(first_dict)
+                second_dict = yaml.safe_load(second_dict)
+                return first_dict, second_dict
 
 
 def sort_dicts(first_dict, second_dict):
