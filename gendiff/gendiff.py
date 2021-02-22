@@ -28,7 +28,7 @@ def generate_diff(first_file=None, second_file=None):
         first_file = args.first_file
         second_file = args.second_file
     diff = get_diff(*sort_dicts(*open_dicts(first_file, second_file)))
-    return json.dumps(diff, indent=2, sort_keys=False)
+    return dict_to_str(diff)
 
 
 def open_dicts(first_path, second_path):
@@ -65,6 +65,21 @@ def sort_dicts(first_dict, second_dict):
     return sorted_first, sorted_second
 
 
+def dict_to_str(dictionary):
+    r"""Convert dictionart to the string with \t and \n characters.
+
+    Args:
+        dictionary (dict): The dictionary.
+
+    Returns:
+        dict_as_str (str): Dictionary as a string.
+    """
+    dict_as_str = ''
+    for key, keys_val in dictionary.items():
+        dict_as_str = '{0}  {1}: {2}\n'.format(dict_as_str, key, keys_val)
+    return '{{\n{0}}}\n'.format(dict_as_str)
+
+
 def get_diff(first_dict, second_dict):
     """Return difference of two dicts.
 
@@ -87,6 +102,6 @@ def get_diff(first_dict, second_dict):
         else:
             diff['- {0}'.format(key)] = value_of_key
     for sec_key in second_dict.keys():
-        if sec_key not in diff.keys():
+        if '  {0}'.format(sec_key) not in diff.keys():
             diff['+ {0}'.format(sec_key)] = second_dict[sec_key]
     return diff
