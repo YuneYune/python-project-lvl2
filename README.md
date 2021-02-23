@@ -5,4 +5,5 @@
 [![wemake-python-styleguide](https://img.shields.io/badge/style-wemake-000000.svg)](https://github.com/wemake-services/wemake-python-styleguide)
 
 
-##### https://asciinema.org/a/XrtuFtHCEqGIccZcXPkD4gXf1
+##### Compare json files [![asciicast](https://asciinema.org/a/QdvvHAf4BsqbeV0wMjWQE2fkR.svg)](https://asciinema.org/a/QdvvHAf4BsqbeV0wMjWQE2fkR)
+##### Compare yaml files [![asciicast](https://asciinema.org/a/WtVG3tzzkcrVYA6VkcJMguoXQ.svg)](https://asciinema.org/a/WtVG3tzzkcrVYA6VkcJMguoXQ)
